@@ -1,14 +1,33 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Note from "./Note";
+import axios from "axios"
 
-const App = (props) => {
+axios.get("http://localhost:3001/notes")
+.then(response => {
+  const notes = response.data
+  console.log(notes)
+ })
+
+const App = () => {
   //el metodo que vamos a usar para cambiar
   //nuestro arreglo 
   //llamamos que es un estado
   //usando useState([])
-  const [notes, setNotes] = useState(props.notes)
+  const [notes, setNotes] = useState([])
   const [newNote, setNewNote] = useState('')
   const [showAll, setShowAll] = useState(true)
+
+
+useEffect(()=> {
+  console.log('Entro al Effect');
+  axios.get("http://localhost:3001/notes")
+   .then(response => {
+     console.log('Entro al then');
+      setNotes(response.data)
+    })
+}, [])
+
+
   const addNote = (event) => {
     event.preventDefault()
     //console.log("Button Clicked", event.target)
