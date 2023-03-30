@@ -1,0 +1,29 @@
+h1 {
+    color:red;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    
+}
+
+
+.note {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    padding-top: 3px
+}
+
+
+.error {
+    color:red;
+    font-size: small;
+    font-size: medium;
+    border-style: solid;
+    border-radius: 5px;
+    font-style: bold;
+    background: lightgray;
+}
+
+button {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
