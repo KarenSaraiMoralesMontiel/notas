@@ -69,7 +69,9 @@ useEffect(()=> {
         Show {showAll ? 'important': 'all'}
       </button>
       <ul>
-        {notesToShow.map(x => {
+        { 
+        //console.log(notesToShow)
+        notesToShow.map(x => {
           console.log(x.id, x.content)
           return (
             <Note 
