@@ -1,9 +1,5 @@
 import axios from "axios"
-<<<<<<< HEAD
 const url = `https://note-service-private.onrender.com/api/notes`
-=======
-
->>>>>>> 63961e65c0d7438fc58704aeb50543683c7cf355
 
 const getAll = () => {
     const request = axios.get(url)
