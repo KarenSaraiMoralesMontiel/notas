@@ -72,7 +72,7 @@ useEffect(()=> {
         { 
         //console.log(notesToShow)
         notesToShow.map(x => {
-          console.log(x.id, x.content)
+          //console.log(x.id, x.content)
           return (
             <Note 
             key={x.id} 
